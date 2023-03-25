@@ -1,12 +1,13 @@
 #pragma once
 #include <cstdint>
 
-class Cell{
+class Cell {
     uint8_t cell;
-    public:
-    bool is_empty();
+public:
+    Cell() : cell(0) {}
+    bool is_empty() const;
     Cell(char c);
-    uint8_t value();
+    uint8_t value() const;
     void set(uint8_t n);
 };
 

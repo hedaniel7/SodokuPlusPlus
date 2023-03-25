@@ -1,6 +1,6 @@
 #include "cell.hpp"
 
-bool Cell::is_empty(){
+bool Cell::is_empty() const{
     return this->cell == 0;
 }
 
@@ -23,7 +23,7 @@ Cell::Cell(char c){
     }
 }
 
-uint8_t Cell::value(){
+uint8_t Cell::value() const{
     if(this->cell == 0){
         throw "Oops";
     }
