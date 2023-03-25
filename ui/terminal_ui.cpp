@@ -16,8 +16,7 @@ TerminalUI::~TerminalUI() {
     endwin();
 }
 
-void TerminalUI::display(const Sudoku& sudoku) const {
-    // Display the Sudoku puzzle using the curses library
+void TerminalUI::display(const Sudoku& sudoku, int current_row, int current_col) const {
     erase();
     draw_board();
 
@@ -25,7 +24,13 @@ void TerminalUI::display(const Sudoku& sudoku) const {
         for (int col = 0; col < 9; ++col) {
             const Cell& cell = sudoku.get_cell(row, col);
             if (!cell.is_empty()) {
+                if (row == current_row && col == current_col) {
+                    attron(COLOR_PAIR(2));
+                }
                 mvaddch(row * 2 + 1, col * 4 + 2, cell.value() + '0');
+                if (row == current_row && col == current_col) {
+                    attroff(COLOR_PAIR(2));
+                }
             }
         }
     }
@@ -33,12 +38,24 @@ void TerminalUI::display(const Sudoku& sudoku) const {
     refresh();
 }
 
-void TerminalUI::run() {
-    // Implement the main loop for the terminal UI
-    int ch;
-    int current_row = 0, current_col = 0;
+void TerminalUI::display_message(const std::string& message) const {
+    mvprintw(0, 0, message.c_str());
+    clrtoeol();
+    refresh();
+}
 
+void TerminalUI::handle_input(const std::function<void(int)>& on_key_press) {
+    int ch;
     while ((ch = getch()) != 'q' && ch != 'Q') {
+        on_key_press(ch);
+    }
+}
+
+void TerminalUI::run() {
+    int current_row = 0, current_col = 0;
+    display(sudoku, current_row, current_col);
+
+    handle_input([&](int ch) {
         switch (ch) {
             case KEY_UP:
                 if (current_row > 0) current_row--;
@@ -52,19 +69,28 @@ void TerminalUI::run() {
             case KEY_RIGHT:
                 if (current_col < 8) current_col++;
                 break;
+            case 'c':
+            case 'C':
+                {
+                    Cell& cell = sudoku.get_cell(current_row, current_col);
+                    if (!cell.is_empty()) {
+                        bool is_correct = check_cell(current_row, current_col);
+                        display_message(is_correct ? "Correct!" : "Incorrect.");
+                    }
+                }
+                break;
             default:
                 if (ch >= '1' && ch <= '9') {
                     Cell& cell = sudoku.get_cell(current_row, current_col);
                     if (cell.is_empty()) {
                         cell.set(ch - '0');
-                        display(sudoku);
                     }
                 }
                 break;
         }
 
-        move(current_row * 2 + 1, current_col * 4 + 2);
-    }
+        display(sudoku, current_row, current_col);
+    });
 }
 
 void TerminalUI::init_colors() const {
@@ -100,4 +126,35 @@ void TerminalUI::draw_board() const {
             attroff(COLOR_PAIR(1));
         }
     }
+}
+
+bool TerminalUI::check_cell(int row, int col) const {
+    int value = sudoku.get_cell(row, col).value();
+
+    // Check row
+    for (int c = 0; c < 9; ++c) {
+        if (c != col && sudoku.get_cell(row, c).value() == value) {
+            return false;
+        }
+    }
+
+    // Check column
+    for (int r = 0; r < 9; ++r) {
+        if (r != row && sudoku.get_cell(r, col).value() == value) {
+            return false;
+        }
+    }
+
+    // Check box
+    int box_start_row = row - (row % 3);
+    int box_start_col = col - (col % 3);
+    for (int r = box_start_row; r < box_start_row + 3; ++r) {
+        for (int c = box_start_col; c < box_start_col + 3; ++c) {
+            if ((r != row || c != col) && sudoku.get_cell(r, c).value() == value) {
+                return false;
+            }
+        }
+    }
+
+    return true;
 }

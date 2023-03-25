@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/tests.dir/lib/test.cpp.o -o tests  -Wl,-rpath,/home/dan/SudokuPlusPlus/build libsudoku.so 
