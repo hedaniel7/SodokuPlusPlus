@@ -12,7 +12,7 @@ Sudoku::Sudoku(const std::vector<std::string>& input) {
         }
 
         for (size_t col = 0; col < 9; ++col) {
-            cells[row][col].set(static_cast<uint8_t>(input[row][col] - '0'));
+            cells[row][col] = Cell(input[row][col]);
         }
     }
 }
@@ -56,17 +56,28 @@ bool Sudoku::solve() {
     return solve(0, 0);
 }
 
+// Implement recursive backtracking algorithm
 bool Sudoku::solve(int row, int col) {
-    // Implement recursive backtracking algorithm
+    // if we reached the end of the column, wrap around to new row.
+    int new_row = (col == 8) ? row + 1 : row;
+    // cycle through columns
+    int new_col = (col + 1) % 9;
+
+    // If the current cell is not empty, it does not make sense to solve.
+    // it. In that case, we pick another cell that we can solve. We do
+    // this by adding to the row and column index.
     if (!cells[row][col].is_empty()) {
-        return solve(col == 8 ? row + 1 : row, (col + 1) % 9);
+        return solve(new_row, new_col);
     }
 
-    for (uint8_t num = 1; num <= 9; ++num) {
-        if (is_safe(row, col, num)) {
-            cells[row][col].set(num);
+    // Current cell is empty, iterate through candidates and check if we
+    // can pick one.
+    for (uint8_t candidate = 1; candidate <= 9; ++candidate) {
+        if (is_safe(row, col, candidate)) {
+            cells[row][col].set(candidate);
 
-            if (solve(col == 8 ? row + 1 : row, (col + 1) % 9)) {
+            // Try solving next cell
+            if (solve(new_row, new_col)) {
                 return true;
             }
 
