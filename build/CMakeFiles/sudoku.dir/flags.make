@@ -6,5 +6,5 @@ CXX_DEFINES = -Dsudoku_EXPORTS
 
 CXX_INCLUDES = 
 
-CXX_FLAGS = -fPIC
+CXX_FLAGS = -fPIC -std=gnu++17
 

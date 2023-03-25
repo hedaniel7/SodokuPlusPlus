@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/sudoku_ui.dir/ui/main.cpp.o CMakeFiles/sudoku_ui.dir/ui/terminal_ui.cpp.o -o sudoku_ui  -Wl,-rpath,/home/dan/SudokuPlusPlus/build libsudoku.so -lcurses /usr/lib/x86_64-linux-gnu/libform.so 

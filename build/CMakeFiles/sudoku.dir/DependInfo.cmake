@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dan/SodokuPlusPlus/lib/cell.cpp" "CMakeFiles/sudoku.dir/lib/cell.cpp.o" "gcc" "CMakeFiles/sudoku.dir/lib/cell.cpp.o.d"
-  "/home/dan/SodokuPlusPlus/lib/sudoku.cpp" "CMakeFiles/sudoku.dir/lib/sudoku.cpp.o" "gcc" "CMakeFiles/sudoku.dir/lib/sudoku.cpp.o.d"
+  "/home/dan/SudokuPlusPlus/lib/cell.cpp" "CMakeFiles/sudoku.dir/lib/cell.cpp.o" "gcc" "CMakeFiles/sudoku.dir/lib/cell.cpp.o.d"
+  "/home/dan/SudokuPlusPlus/lib/sudoku.cpp" "CMakeFiles/sudoku.dir/lib/sudoku.cpp.o" "gcc" "CMakeFiles/sudoku.dir/lib/sudoku.cpp.o.d"
   )
 
 # Targets to which this target links.

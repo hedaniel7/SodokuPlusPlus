@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dan/SodokuPlusPlus
+CMAKE_SOURCE_DIR = /home/dan/SudokuPlusPlus
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dan/SodokuPlusPlus/build
+CMAKE_BINARY_DIR = /home/dan/SudokuPlusPlus/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/dan/SodokuPlusPlus/build
 # The main recursive "all" target.
 all: CMakeFiles/sudoku.dir/all
 all: CMakeFiles/tests.dir/all
+all: CMakeFiles/sudoku_ui.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,6 +75,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/sudoku.dir/clean
 clean: CMakeFiles/tests.dir/clean
+clean: CMakeFiles/sudoku_ui.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -83,14 +85,14 @@ clean: CMakeFiles/tests.dir/clean
 CMakeFiles/sudoku.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sudoku.dir/build.make CMakeFiles/sudoku.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sudoku.dir/build.make CMakeFiles/sudoku.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dan/SodokuPlusPlus/build/CMakeFiles --progress-num=1,2,3 "Built target sudoku"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dan/SudokuPlusPlus/build/CMakeFiles --progress-num=1,2,3 "Built target sudoku"
 .PHONY : CMakeFiles/sudoku.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sudoku.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dan/SodokuPlusPlus/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dan/SudokuPlusPlus/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sudoku.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dan/SodokuPlusPlus/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dan/SudokuPlusPlus/build/CMakeFiles 0
 .PHONY : CMakeFiles/sudoku.dir/rule
 
 # Convenience name for target.
@@ -109,14 +111,14 @@ CMakeFiles/sudoku.dir/clean:
 CMakeFiles/tests.dir/all: CMakeFiles/sudoku.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dan/SodokuPlusPlus/build/CMakeFiles --progress-num=4,5 "Built target tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dan/SudokuPlusPlus/build/CMakeFiles --progress-num=7,8 "Built target tests"
 .PHONY : CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dan/SodokuPlusPlus/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dan/SudokuPlusPlus/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dan/SodokuPlusPlus/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dan/SudokuPlusPlus/build/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
@@ -127,6 +129,32 @@ tests: CMakeFiles/tests.dir/rule
 CMakeFiles/tests.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/clean
 .PHONY : CMakeFiles/tests.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/sudoku_ui.dir
+
+# All Build rule for target.
+CMakeFiles/sudoku_ui.dir/all: CMakeFiles/sudoku.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sudoku_ui.dir/build.make CMakeFiles/sudoku_ui.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sudoku_ui.dir/build.make CMakeFiles/sudoku_ui.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dan/SudokuPlusPlus/build/CMakeFiles --progress-num=4,5,6 "Built target sudoku_ui"
+.PHONY : CMakeFiles/sudoku_ui.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sudoku_ui.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dan/SudokuPlusPlus/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sudoku_ui.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dan/SudokuPlusPlus/build/CMakeFiles 0
+.PHONY : CMakeFiles/sudoku_ui.dir/rule
+
+# Convenience name for target.
+sudoku_ui: CMakeFiles/sudoku_ui.dir/rule
+.PHONY : sudoku_ui
+
+# clean rule for target.
+CMakeFiles/sudoku_ui.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sudoku_ui.dir/build.make CMakeFiles/sudoku_ui.dir/clean
+.PHONY : CMakeFiles/sudoku_ui.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

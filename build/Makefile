@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dan/SodokuPlusPlus
+CMAKE_SOURCE_DIR = /home/dan/SudokuPlusPlus
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dan/SodokuPlusPlus/build
+CMAKE_BINARY_DIR = /home/dan/SudokuPlusPlus/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dan/SodokuPlusPlus/build/CMakeFiles /home/dan/SodokuPlusPlus/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dan/SudokuPlusPlus/build/CMakeFiles /home/dan/SudokuPlusPlus/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dan/SodokuPlusPlus/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dan/SudokuPlusPlus/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -141,6 +141,19 @@ tests: cmake_check_build_system
 tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
 .PHONY : tests/fast
+
+#=============================================================================
+# Target rules for targets named sudoku_ui
+
+# Build rule for target.
+sudoku_ui: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sudoku_ui
+.PHONY : sudoku_ui
+
+# fast build rule for target.
+sudoku_ui/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sudoku_ui.dir/build.make CMakeFiles/sudoku_ui.dir/build
+.PHONY : sudoku_ui/fast
 
 lib/cell.o: lib/cell.cpp.o
 .PHONY : lib/cell.o
@@ -214,6 +227,54 @@ lib/test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/lib/test.cpp.s
 .PHONY : lib/test.cpp.s
 
+ui/main.o: ui/main.cpp.o
+.PHONY : ui/main.o
+
+# target to build an object file
+ui/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sudoku_ui.dir/build.make CMakeFiles/sudoku_ui.dir/ui/main.cpp.o
+.PHONY : ui/main.cpp.o
+
+ui/main.i: ui/main.cpp.i
+.PHONY : ui/main.i
+
+# target to preprocess a source file
+ui/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sudoku_ui.dir/build.make CMakeFiles/sudoku_ui.dir/ui/main.cpp.i
+.PHONY : ui/main.cpp.i
+
+ui/main.s: ui/main.cpp.s
+.PHONY : ui/main.s
+
+# target to generate assembly for a file
+ui/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sudoku_ui.dir/build.make CMakeFiles/sudoku_ui.dir/ui/main.cpp.s
+.PHONY : ui/main.cpp.s
+
+ui/terminal_ui.o: ui/terminal_ui.cpp.o
+.PHONY : ui/terminal_ui.o
+
+# target to build an object file
+ui/terminal_ui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sudoku_ui.dir/build.make CMakeFiles/sudoku_ui.dir/ui/terminal_ui.cpp.o
+.PHONY : ui/terminal_ui.cpp.o
+
+ui/terminal_ui.i: ui/terminal_ui.cpp.i
+.PHONY : ui/terminal_ui.i
+
+# target to preprocess a source file
+ui/terminal_ui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sudoku_ui.dir/build.make CMakeFiles/sudoku_ui.dir/ui/terminal_ui.cpp.i
+.PHONY : ui/terminal_ui.cpp.i
+
+ui/terminal_ui.s: ui/terminal_ui.cpp.s
+.PHONY : ui/terminal_ui.s
+
+# target to generate assembly for a file
+ui/terminal_ui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sudoku_ui.dir/build.make CMakeFiles/sudoku_ui.dir/ui/terminal_ui.cpp.s
+.PHONY : ui/terminal_ui.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -223,6 +284,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sudoku"
+	@echo "... sudoku_ui"
 	@echo "... tests"
 	@echo "... lib/cell.o"
 	@echo "... lib/cell.i"
@@ -233,6 +295,12 @@ help:
 	@echo "... lib/test.o"
 	@echo "... lib/test.i"
 	@echo "... lib/test.s"
+	@echo "... ui/main.o"
+	@echo "... ui/main.i"
+	@echo "... ui/main.s"
+	@echo "... ui/terminal_ui.o"
+	@echo "... ui/terminal_ui.i"
+	@echo "... ui/terminal_ui.s"
 .PHONY : help
 
 

@@ -1,4 +1,5 @@
-/home/dan/SodokuPlusPlus/build/CMakeFiles/sudoku.dir
-/home/dan/SodokuPlusPlus/build/CMakeFiles/tests.dir
-/home/dan/SodokuPlusPlus/build/CMakeFiles/edit_cache.dir
-/home/dan/SodokuPlusPlus/build/CMakeFiles/rebuild_cache.dir
+/home/dan/SudokuPlusPlus/build/CMakeFiles/sudoku.dir
+/home/dan/SudokuPlusPlus/build/CMakeFiles/tests.dir
+/home/dan/SudokuPlusPlus/build/CMakeFiles/sudoku_ui.dir
+/home/dan/SudokuPlusPlus/build/CMakeFiles/edit_cache.dir
+/home/dan/SudokuPlusPlus/build/CMakeFiles/rebuild_cache.dir

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dan/SodokuPlusPlus
+CMAKE_SOURCE_DIR = /home/dan/SudokuPlusPlus
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dan/SodokuPlusPlus/build
+CMAKE_BINARY_DIR = /home/dan/SudokuPlusPlus/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/sudoku.dir/depend.make
@@ -72,30 +72,30 @@ include CMakeFiles/sudoku.dir/flags.make
 CMakeFiles/sudoku.dir/lib/sudoku.cpp.o: CMakeFiles/sudoku.dir/flags.make
 CMakeFiles/sudoku.dir/lib/sudoku.cpp.o: ../lib/sudoku.cpp
 CMakeFiles/sudoku.dir/lib/sudoku.cpp.o: CMakeFiles/sudoku.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dan/SodokuPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sudoku.dir/lib/sudoku.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sudoku.dir/lib/sudoku.cpp.o -MF CMakeFiles/sudoku.dir/lib/sudoku.cpp.o.d -o CMakeFiles/sudoku.dir/lib/sudoku.cpp.o -c /home/dan/SodokuPlusPlus/lib/sudoku.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dan/SudokuPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sudoku.dir/lib/sudoku.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sudoku.dir/lib/sudoku.cpp.o -MF CMakeFiles/sudoku.dir/lib/sudoku.cpp.o.d -o CMakeFiles/sudoku.dir/lib/sudoku.cpp.o -c /home/dan/SudokuPlusPlus/lib/sudoku.cpp
 
 CMakeFiles/sudoku.dir/lib/sudoku.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sudoku.dir/lib/sudoku.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dan/SodokuPlusPlus/lib/sudoku.cpp > CMakeFiles/sudoku.dir/lib/sudoku.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dan/SudokuPlusPlus/lib/sudoku.cpp > CMakeFiles/sudoku.dir/lib/sudoku.cpp.i
 
 CMakeFiles/sudoku.dir/lib/sudoku.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sudoku.dir/lib/sudoku.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dan/SodokuPlusPlus/lib/sudoku.cpp -o CMakeFiles/sudoku.dir/lib/sudoku.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dan/SudokuPlusPlus/lib/sudoku.cpp -o CMakeFiles/sudoku.dir/lib/sudoku.cpp.s
 
 CMakeFiles/sudoku.dir/lib/cell.cpp.o: CMakeFiles/sudoku.dir/flags.make
 CMakeFiles/sudoku.dir/lib/cell.cpp.o: ../lib/cell.cpp
 CMakeFiles/sudoku.dir/lib/cell.cpp.o: CMakeFiles/sudoku.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dan/SodokuPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sudoku.dir/lib/cell.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sudoku.dir/lib/cell.cpp.o -MF CMakeFiles/sudoku.dir/lib/cell.cpp.o.d -o CMakeFiles/sudoku.dir/lib/cell.cpp.o -c /home/dan/SodokuPlusPlus/lib/cell.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dan/SudokuPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sudoku.dir/lib/cell.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sudoku.dir/lib/cell.cpp.o -MF CMakeFiles/sudoku.dir/lib/cell.cpp.o.d -o CMakeFiles/sudoku.dir/lib/cell.cpp.o -c /home/dan/SudokuPlusPlus/lib/cell.cpp
 
 CMakeFiles/sudoku.dir/lib/cell.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sudoku.dir/lib/cell.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dan/SodokuPlusPlus/lib/cell.cpp > CMakeFiles/sudoku.dir/lib/cell.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dan/SudokuPlusPlus/lib/cell.cpp > CMakeFiles/sudoku.dir/lib/cell.cpp.i
 
 CMakeFiles/sudoku.dir/lib/cell.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sudoku.dir/lib/cell.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dan/SodokuPlusPlus/lib/cell.cpp -o CMakeFiles/sudoku.dir/lib/cell.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dan/SudokuPlusPlus/lib/cell.cpp -o CMakeFiles/sudoku.dir/lib/cell.cpp.s
 
 # Object files for target sudoku
 sudoku_OBJECTS = \
@@ -109,7 +109,7 @@ libsudoku.so: CMakeFiles/sudoku.dir/lib/sudoku.cpp.o
 libsudoku.so: CMakeFiles/sudoku.dir/lib/cell.cpp.o
 libsudoku.so: CMakeFiles/sudoku.dir/build.make
 libsudoku.so: CMakeFiles/sudoku.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dan/SodokuPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libsudoku.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dan/SudokuPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libsudoku.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sudoku.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/sudoku.dir/clean:
 .PHONY : CMakeFiles/sudoku.dir/clean
 
 CMakeFiles/sudoku.dir/depend:
-	cd /home/dan/SodokuPlusPlus/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dan/SodokuPlusPlus /home/dan/SodokuPlusPlus /home/dan/SodokuPlusPlus/build /home/dan/SodokuPlusPlus/build /home/dan/SodokuPlusPlus/build/CMakeFiles/sudoku.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dan/SudokuPlusPlus/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dan/SudokuPlusPlus /home/dan/SudokuPlusPlus /home/dan/SudokuPlusPlus/build /home/dan/SudokuPlusPlus/build /home/dan/SudokuPlusPlus/build/CMakeFiles/sudoku.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/sudoku.dir/depend
 
