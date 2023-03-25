@@ -1,5 +1,5 @@
-# SodokuPlusPlus
-Sodoku in C++.
+# SudokuPlusPlus
+Sudoku in C++.
 This project contains a solver and a UI.
 - Operating System: Linux
 - Language: C++ 17
